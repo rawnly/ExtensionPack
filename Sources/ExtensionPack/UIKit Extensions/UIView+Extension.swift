@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 // MARK: - Convenience initializers
-extension UIView {
+public extension UIView {
     convenience init(color: UIColor) {
         self.init()
         
@@ -19,7 +19,7 @@ extension UIView {
 }
 
 // MARK: - Style
-extension UIView {
+public extension UIView {
     typealias BorderPosition = Side
     
     enum Axis {
@@ -128,7 +128,7 @@ extension UIView {
 
 
 // MARK: - Constraints
-extension UIView {
+public extension UIView {
     @discardableResult
     func setConstraints(_ constraints: [NSLayoutConstraint]) -> UIView {
         guard let _ = superview else {
@@ -425,7 +425,7 @@ extension UIView {
 }
 
 // MARK: - BoxShadow
-extension UIView {
+public extension UIView {
     func addShadow(offset: CGSize = CGSize(width: 0, height: 0), opacity: Float = 0.2, radius: CGFloat = 5, shadowColor: UIColor = .black) {
         layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: layer.cornerRadius).cgPath
         layer.shadowColor = shadowColor.cgColor
@@ -451,7 +451,7 @@ extension UIView {
 }
 
 // MARK: - Corners
-extension UIView {
+public extension UIView {
     enum Corner: Int {
         case bottomRight
         case topRight
@@ -524,7 +524,7 @@ extension UIView {
     }
 }
 
-extension CALayer {
+public extension CALayer {
     func addShadow(offset: CGSize = CGSize(width: 0, height: 0), opacity: Float = 0.2, radius: CGFloat = 5) {
         shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
         shadowColor = UIColor.black.cgColor
